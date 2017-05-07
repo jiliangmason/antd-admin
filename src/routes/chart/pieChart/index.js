@@ -41,7 +41,7 @@ const TwoLevelPieChart = () => (
 const StraightAnglePieChart = () => (
   <Container>
     <PieChart >
-      <Pie startAngle={180} endAngle={0} data={data02} outerRadius={140} fill="#8884d8" label/>
+      <Pie cy={180} startAngle={180} endAngle={0} data={data02} outerRadius={110} fill="#8884d8" label/>
     </PieChart>
   </Container>
 )
@@ -163,8 +163,8 @@ class CustomActiveShapePieChart extends React.Component{
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
             data={data}
-            innerRadius={80}
-            outerRadius={100}
+            innerRadius={70}
+            outerRadius={80}
             fill="#8884d8"/>
         </PieChart>
       </Container>
