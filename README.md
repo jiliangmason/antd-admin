@@ -90,6 +90,10 @@
 
     npm i 或者 yarn install
     npm i roadhog@0.6.0-beta.6 -g
+    不使用roadhog时则安装下面的依赖
+    // npm i webpack@2.5.1 connect-history-api-fallback@1.3.0 webpack-dev-middleware@1.10.2 webpack-hot-middleware@2.18.0 nyan-progress-webpack-plugin@1.2.0 eslint-friendly-formatter@2.0.7 html-webpack-plugin@2.28.0 extract-text-webpack-plugin@2.1.0 browser-sync@2.11.1 browser-sync-webpack-plugin@1.1.4 copy-webpack-plugin@4.0.1 clean-webpack-plugin@0.1.16
+    npm i webpack@1.12.2 connect-history-api-fallback@1.1.0 webpack-dev-middleware@1.4.0 webpack-hot-middleware@2.6.0 nyan-progress-webpack-plugin@1.1.4 eslint-friendly-formatter@1.2.2 html-webpack-plugin@1.7.0 extract-text-webpack-plugin@0.9.1 browser-sync@2.11.1 browser-sync-webpack-plugin@1.0.1 copy-webpack-plugin@4.0.1 clean-webpack-plugin@0.1.13
+    npm i style-loader@0.13.1 css-loader@0.23.0 less@2.6.0 less-loader@2.2.2
 
 开发：
 

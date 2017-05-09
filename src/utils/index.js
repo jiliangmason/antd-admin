@@ -1,6 +1,6 @@
 import config from './config'
 import menu from './menu'
-import request from './request'
+import request, {setLoactionOrigin} from './request'
 import classnames from 'classnames'
 import { color } from './theme'
 import lodash from 'lodash'
@@ -99,14 +99,6 @@ const arrayToTree = (array, id = 'id', pid = 'pid', children = 'children') => {
   return result
 }
 
-/**
- * location.origin兼容IE
- */
-const setLoactionOrigin = () => {
-  if (!window.location.origin) {
-    window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
-  }
-}
 module.exports = {
   config,
   menu,

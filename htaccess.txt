@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  Options Indexes FollowSymLinks
+  Order allow,deny
+  Allow from all
+
+  RewriteRule ^/?([\w\/\.]*)$ index.html
+</IfModule>

@@ -1,7 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
 import { YQL, CORS, baseURL } from './config'
-import { setLoactionOrigin } from './index'
 import jsonp from 'jsonp'
 import lodash from 'lodash'
 import pathToRegexp from 'path-to-regexp'
@@ -115,4 +114,16 @@ export default function request (options) {
     }
     return { success: false, status, message: msg, ...otherData }
   })
+}
+
+/**
+ * location.origin兼容IE
+ */
+const setLoactionOrigin = () => {
+  if (!window.location.origin) {
+    window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+  }
+}
+export {
+  setLoactionOrigin
 }

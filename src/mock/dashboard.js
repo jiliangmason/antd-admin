@@ -1,4 +1,4 @@
-import { color } from '../utils/theme'
+const color = require('../utils/theme').color
 const Mock = require('mockjs')
 const config = require('../utils/config')
 const { apiPrefix } = config

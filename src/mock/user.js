@@ -128,7 +128,12 @@ module.exports = {
 
   [`GET ${apiPrefix}/users`] (req, res) {
     const { query } = req
-    let { pageSize, page, ...other } = query
+    // let { pageSize, page, ...other } = query
+    let { pageSize, page } = query
+    let other = query
+    delete other['pageSize']
+    delete other['page']
+
     pageSize = pageSize || 10
     page = page || 1
 

@@ -2,13 +2,13 @@ import './index.html'
 import 'babel-polyfill'
 import dva from 'dva'
 import createLoading from 'dva-loading'
-import { browserHistory } from 'dva/router'
+import { browserHistory, hashHistory } from 'dva/router'
 import { message } from 'antd'
 
 // 1. Initialize
 const app = dva({
   ...createLoading(),
-  history: browserHistory,
+  history: process.env.NODE_ENV.trim() == 'development' ? browserHistory : hashHistory,
   onError (error) {
     message.error(error.message)
   },
