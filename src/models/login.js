@@ -23,6 +23,7 @@ export default {
         } else {
           yield put(routerRedux.push('/dashboard'))
         }
+        localStorage.setItem('userinfo', JSON.stringify(data))
       } else {
         throw data
       }

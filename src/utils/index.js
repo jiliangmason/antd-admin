@@ -99,6 +99,19 @@ const arrayToTree = (array, id = 'id', pid = 'pid', children = 'children') => {
   return result
 }
 
+/**
+ *
+ * @returns {{pathname: *, hash: string}}
+ */
+const hashPathInfo = () => {
+  let realPathname = location.hash.split('?')[0]
+  realPathname = realPathname.split('#')[1]
+  return {
+    pathname: realPathname,
+    hash: location.hash
+  }
+}
+
 module.exports = {
   config,
   menu,
@@ -108,5 +121,6 @@ module.exports = {
   queryURL,
   queryArray,
   arrayToTree,
-  setLoactionOrigin
+  setLoactionOrigin,
+  hashPathInfo
 }

@@ -8,7 +8,7 @@ import { message } from 'antd'
 // 1. Initialize
 const app = dva({
   ...createLoading(),
-  history: process.env.NODE_ENV.trim() == 'development' ? browserHistory : hashHistory,
+  history: process.env.NODE_ENV.trim() == 'development' ? hashHistory : hashHistory,
   onError (error) {
     message.error(error.message)
   },

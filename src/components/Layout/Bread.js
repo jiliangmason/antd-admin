@@ -4,14 +4,16 @@ import { Breadcrumb, Icon } from 'antd'
 import { Link } from 'dva/router'
 import styles from './Bread.less'
 import pathToRegexp from 'path-to-regexp'
-import { queryArray } from '../../utils'
+import { queryArray, hashPathInfo } from '../../utils'
 
 const Bread = ({ menu }) => {
   // 匹配当前路由
   let pathArray = []
   let current
   for (let index in menu) {
-    if (menu[index].router && pathToRegexp(menu[index].router).exec(location.pathname)) {
+    let pathname = hashPathInfo().pathname
+    // location.pathname
+    if (menu[index].router && pathToRegexp(menu[index].router).exec(pathname)) {
       current = menu[index]
       break
     }
